@@ -142,7 +142,7 @@ function makeOreo(ob,x,z,ctx){
     }
     else if(oreo[i] === "&"){
       if((i !== oreo.length - 1)&&(i !== 0)){
-          y=  y+ 100*z
+          y=  y+ 10*z
       }
       else if(i === 0){
         if(x === 0){
