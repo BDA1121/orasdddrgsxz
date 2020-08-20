@@ -125,7 +125,7 @@ function logKey(e) {
     	drag = true;
     	console.log("---------");
     	if(o === "o1"){
-    		var data = canvas2.toDataURL('image/png');
+    		var data = canvas1.toDataURL('image/png');
 					document.getElementById("oreoim").setAttribute('src', data);
 					canvas1.style.top = dy + "px" ;
 canvas1.style.left = (dx+300) + "px";
@@ -145,12 +145,12 @@ x =0;
 
     	}
     	if(o === "o3"){
-    		var data = canvas2.toDataURL('image/png');
+    		var data = canvas3.toDataURL('image/png');
 					document.getElementById("oreoim").setAttribute('src', data);
 					canvas3.style.top = dy + "px" ;
 canvas3.style.left = (dx+900) + "px";
 ctx3.clearRect(0,0,300,150);
-x =0;
+x =1;
  		oreof3 = true;
 
     	}
