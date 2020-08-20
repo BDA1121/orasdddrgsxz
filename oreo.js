@@ -130,7 +130,7 @@ function logKey(e) {
 
     		var data = canvas1.toDataURL('image/png');
 		while(k !== 0){
-			if(imgs[l] === "undefined"){
+			if(imgs[l] === undefined){
 			imgs[l].setAttribute('src', data);
 				k = 0;
 			}
