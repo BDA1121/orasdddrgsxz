@@ -70,14 +70,14 @@ event.preventDefault();
  	document.querySelector("#input").value = "";
  	size1 = document.querySelector("#inputs").value;
  	}
- 	if(x === 1 && oreof2){
+ 	else if(x === 1 && oreof2){
  		oreof2 = false;
     oreo2 = document.querySelector("#input").value ;
  	document.querySelector("#input").value = "";
  		document.querySelector("#input").placeholder = "last oreo";
  	size2 = document.querySelector("#inputs").value;
  	}
- 	if(x === 2 && oreof3){
+ 	else if(x === 2 && oreof3){
 
  		oreof3 = false;
     oreo3 = document.querySelector("#input").value ;
