@@ -113,7 +113,7 @@ function logKey(e) {
 					var data = canvas1.toDataURL('image/png');
 					document.getElementById("oreoim").setAttribute('src', data);
 	    canvas1.style.top = dx + "px" ;
-canvas1.style.left = dx + "px";
+canvas1.style.left = dy + "px";
 ctx1.clearRect(0,0,300,150);
 	    x = -1;
 					
