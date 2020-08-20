@@ -186,18 +186,10 @@ x =1;
  		oreof3 = true;
 
     	}
-					  screenLog.innerText = `
-    Screen X/Y: ${e.screenX}, ${e.screenY}
-    Client X/Y: ${e.clientX}, ${e.clientY}`;
-					
-    	
-    }
+
 	else if(e.clientX<645  && e.clientX>415){
 		console.log("----------");
 		o = "o1";
-  screenLog.innerText = `
-    Screen X/Y: ${e.screenX}, ${e.screenY}
-    Client X/Y: ${e.clientX}, ${e.clientY}`;
     if(drag){
     	dx1 = e.clientX;
     	dy1 = e.clientY;
@@ -216,9 +208,6 @@ x =1;
 }
 else if(e.clientX>645  && e.clientX<895){
 	o = "o2";
-  screenLog.innerText = `
-    Screen X/Y: ${e.screenX}, ${e.screenY}
-    Client X/Y: ${e.clientX}, ${e.clientY}`;
     if(drag){
     	dx2 = e.clientX;
     	dy2 = e.clientY;
@@ -237,9 +226,6 @@ else if(e.clientX>645  && e.clientX<895){
 }
 else if(e.clientX<1125  && e.clientX>895){
 	o = "o3";
-  screenLog.innerText = `
-    Screen X/Y: ${e.screenX}, ${e.screenY}
-    Client X/Y: ${e.clientX}, ${e.clientY}`;
     if(drag){
     	dx3 = e.clientX;
     	dy3 = e.clientY;
