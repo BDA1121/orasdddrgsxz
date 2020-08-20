@@ -112,6 +112,9 @@ function logKey(e) {
     	console.log("---------");
 					var data = canvas1.toDataURL('image/png');
 					document.getElementById("oreoim").setAttribute('src', data);
+	    canvas1.style.top = dx + "px" ;
+canvas1.style.left = dx + "px";
+ctx1.clearRect(0,0,300,150);
 					
   screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
