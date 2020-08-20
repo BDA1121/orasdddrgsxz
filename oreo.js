@@ -115,6 +115,7 @@ function logKey(e) {
 	    canvas1.style.top = dx + "px" ;
 canvas1.style.left = dx + "px";
 ctx1.clearRect(0,0,300,150);
+	    x = -1;
 					
   screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
