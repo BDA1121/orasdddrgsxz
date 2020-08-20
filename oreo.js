@@ -119,7 +119,7 @@ window.addEventListener("mousemove",function(e){
     	})
 window.addEventListener('click', logKey);
 var screenLog = document.getElementById("screen-log");
-var drag = true,dx,dx1,dy,dy1,t = "",ty = "";
+var drag = true,dx,dx1,dy,dy1,dx2,dy2,dx3,dy3,t = "",ty = "";
 function logKey(e) {
     if(e.clientX<1495  && e.clientX>1178){
     	drag = true;
@@ -216,8 +216,8 @@ else if(e.clientX<1125  && e.clientX>895){
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
     if(drag){
-    	dx2 = e.clientX;
-    	dy2 = e.clientY;
+    	dx3 = e.clientX;
+    	dy3 = e.clientY;
     	dx  = canvas3.style.top ;
     	dy  = canvas3.style.left;
     	drag = false;
