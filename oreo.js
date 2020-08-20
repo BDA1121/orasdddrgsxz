@@ -107,7 +107,7 @@ window.addEventListener("mousemove",function(e){
     		else if(!drag && o === "o2"){
     		console.log(";;")
     		var xc1 = 655 - dx2 + e.clientX;
-            var yc1 =110 - dy2 + e.clientY-;
+            var yc1 =110 - dy2 + e.clientY;
     		canvas2.style.top = yc1+ "px" 
     		canvas2.style.left = xc1 + "px"; }
     		else if(!drag && o === "o3"){
