@@ -81,10 +81,6 @@ event.preventDefault();
 
  		oreof3 = false;
     oreo3 = document.querySelector("#input").value ;
- 		document.querySelector("#input").style.display = "none";
-        document.querySelector("#inputs").style.display = "none";
- 		but.style.display = "none";
- 		document.querySelector("#over").style.display = "";
  	size3 = document.querySelector("#inputs").value;
  	}
  	if(oreo1 !== undefined){
@@ -116,8 +112,8 @@ window.addEventListener("mousemove",function(e){
     		canvas2.style.left = xc + "px"; }
     		else if(!drag && o === "o3"){
     		console.log(";;")
-    		var xc = Number(dx) - dx1 + e.clientX+600;
-            var yc = Number(dy) - dy1 + e.clientY-600;
+    		var xc = Number(dx) - dx1 + e.clientX+900;
+            var yc = Number(dy) - dy1 + e.clientY-900;
     		canvas3.style.top = yc + "px" 
     		canvas3.style.left = xc + "px"; }
     	})
