@@ -117,7 +117,7 @@ window.addEventListener("mousemove",function(e){
     		canvas3.style.top = yc2 + "px" 
     		canvas3.style.left = xc2 + "px"; }
     	})
-var imgs = document.querySelectorAll("oreoim")
+var imgs = document.querySelectorAll(".oreoim")
 window.addEventListener('click', logKey);
 var screenLog = document.getElementById("screen-log");
 var drag = true,dx,dx1,dy,dy1,dx2,dy2,dx3,dy3,t = "",ty = "";
