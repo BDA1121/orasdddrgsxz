@@ -1,7 +1,7 @@
 var canvas1 = document.getElementById("canvas1");
 var canvas2 = document.getElementById("canvas2");
 var canvas3 = document.getElementById("canvas3");
-document.body.style.backgroundImage = "url('slide1.png')";
+document.body.style.backgroundImage = "url('slides1.png')";
 var but = document.getElementById("but");
 
 var ctx1 = canvas1.getContext('2d');
@@ -58,23 +58,28 @@ ctx.fillStyle = '#73c2fb';
  	}
  //})
  var oreo1,oreo2,oreo3,size1,size2,size3;
+ var oreof1=true, oreof3=true, oreof3=true;
  function  oreosss(event){
 event.preventDefault();
  	
  	x = x+1
- 	if(x === 0){
+ 	if(x === 0 && oreof1){
+ 		oreof1 = false;
     oreo1 = document.querySelector("#input").value ;
  	document.querySelector("#input").placeholder = "another oreo";
  	document.querySelector("#input").value = "";
  	size1 = document.querySelector("#inputs").value;
  	}
- 	if(x === 1){
+ 	if(x === 1 && oreof2){
+ 		oreof2 = false;
     oreo2 = document.querySelector("#input").value ;
  	document.querySelector("#input").value = "";
  		document.querySelector("#input").placeholder = "last oreo";
  	size2 = document.querySelector("#inputs").value;
  	}
- 	if(x === 2){
+ 	if(x === 2 && oreof3){
+
+ 		oreof3 = false;
     oreo3 = document.querySelector("#input").value ;
  		document.querySelector("#input").style.display = "none";
         document.querySelector("#inputs").style.display = "none";
@@ -94,6 +99,7 @@ event.preventDefault();
  	
  	 	
  }
+
 //window.addEventListener('mousemove', logKey);
 window.addEventListener("mousemove",function(e){
     		 if(!drag){
@@ -112,11 +118,11 @@ function logKey(e) {
     	console.log("---------");
 					var data = canvas1.toDataURL('image/png');
 					document.getElementById("oreoim").setAttribute('src', data);
-	    canvas1.style.top = dx + "px" ;
-canvas1.style.left = dy + "px";
+					canvas1.style.top = dx + "px" ;
+canvas1.style.left = 420 + "px";
 ctx1.clearRect(0,0,300,150);
-	    x = -1;
-					
+x =-1;
+ 		oreof1 = true;
   screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
