@@ -130,8 +130,8 @@ function logKey(e) {
 
     		var data = canvas1.toDataURL('image/png');
 		while(k !== 0){
-			if(imgs.[l].getAttribute('src') === null){
-			imgs.[l].setAttribute('src', data);
+			if(imgs[l].getAttribute('src') === null){
+			imgs[l].setAttribute('src', data);
 				k = 0;
 			}
 		   l++;
@@ -150,8 +150,8 @@ x =-1;
 
     		var data = canvas1.toDataURL('image/png');
 		while(k !== 0){
-			if(imgs.[l].getAttribute('src') === null){
-			imgs.[l].setAttribute('src', data);
+			if(imgs[l].getAttribute('src') === null){
+			imgs[l].setAttribute('src', data);
 				k = 0;
 			}
 		   l++;
@@ -171,8 +171,8 @@ x =0;
 
     		var data = canvas1.toDataURL('image/png');
 		while(k !== 0){
-			if(imgs.[l].getAttribute('src') === null){
-			imgs.[l].setAttribute('src', data);
+			if(imgs[l].getAttribute('src') === null){
+			imgs[l].setAttribute('src', data);
 				k = 0;
 			}
 		   l++;
