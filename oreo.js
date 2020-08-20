@@ -148,7 +148,7 @@ x =-1;
     	if(o === "o2"){
     		var k =1,l=0;
 
-    		var data = canvas1.toDataURL('image/png');
+    		var data = canvas2.toDataURL('image/png');
 		while(k !== 0){
 			if(imgs[l].getAttribute('src') === null){
 			imgs[l].setAttribute('src', data);
@@ -169,7 +169,7 @@ x =0;
     	if(o === "o3"){
     		var k =1,l=0;
 
-    		var data = canvas1.toDataURL('image/png');
+    		var data = canvas3.toDataURL('image/png');
 		while(k !== 0){
 			if(imgs[l].getAttribute('src') === null){
 			imgs[l].setAttribute('src', data);
