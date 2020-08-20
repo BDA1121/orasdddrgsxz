@@ -106,14 +106,14 @@ window.addEventListener("mousemove",function(e){
     		canvas1.style.left = xc + "px"; }
     		else if(!drag && o === "o2"){
     		console.log(";;")
-    		var xc = 655 - dx1 + e.clientX+600;
-            var yc =110 - dy1 + e.clientY-600;
+    		var xc = 655 - dx1 + e.clientX;
+            var yc =110 - dy1 + e.clientY-;
     		canvas2.style.top = yc + "px" 
     		canvas2.style.left = xc + "px"; }
     		else if(!drag && o === "o3"){
     		console.log(";;")
-    		var xc = 895 - dx1 + e.clientX+900;
-            var yc = 110 - dy1 + e.clientY-900;
+    		var xc = 895 - dx1 + e.clientX;
+            var yc = 110 - dy1 + e.clientY;
     		canvas3.style.top = yc + "px" 
     		canvas3.style.left = xc + "px"; }
     	})
