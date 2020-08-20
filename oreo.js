@@ -1,4 +1,5 @@
-var canvas1 = document.getElementById("canvas1");
+window.onload = function(){
+	var canvas1 = document.getElementById("canvas1");
 var canvas2 = document.getElementById("canvas2");
 var canvas3 = document.getElementById("canvas3");
 document.body.style.backgroundImage = "url('slide1.png')";
@@ -312,3 +313,4 @@ else if(e.clientX<1125  && e.clientX>895){
  		}
  	}}
  }
+}
