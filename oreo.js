@@ -117,6 +117,7 @@ window.addEventListener("mousemove",function(e){
     		canvas3.style.top = yc2 + "px" 
     		canvas3.style.left = xc2 + "px"; }
     	})
+var imgs = document.querySelectorAll("oreoim")
 window.addEventListener('click', logKey);
 var screenLog = document.getElementById("screen-log");
 var drag = true,dx,dx1,dy,dy1,dx2,dy2,dx3,dy3,t = "",ty = "";
@@ -125,8 +126,16 @@ function logKey(e) {
     	drag = true;
     	console.log("---------");
     	if(o === "o1"){
+		var k =1,l=0;
+
     		var data = canvas1.toDataURL('image/png');
-					document.getElementById("oreoim").setAttribute('src', data);
+		while(k !== 0){
+			if(imgs.[l].getAttribute('src') === null){
+			imgs.[l].setAttribute('src', data);
+				k = 0;
+			}
+		   l++;
+		}		
 					canvas1.style.top = 110 + "px" ;
 		var sdf =  (Number(dx)+300) ;
 canvas1.style.left = 415 + "px";
@@ -137,8 +146,16 @@ x =-1;
 
     	}
     	if(o === "o2"){
-    		var data = canvas2.toDataURL('image/png');
-					document.getElementById("oreoim").setAttribute('src', data);
+    		var k =1,l=0;
+
+    		var data = canvas1.toDataURL('image/png');
+		while(k !== 0){
+			if(imgs.[l].getAttribute('src') === null){
+			imgs.[l].setAttribute('src', data);
+				k = 0;
+			}
+		   l++;
+		}
 					canvas2.style.top = 111 + "px" ;
 		var sdf = (Number(dx)+600);
 		
@@ -150,8 +167,16 @@ x =0;
 
     	}
     	if(o === "o3"){
-    		var data = canvas3.toDataURL('image/png');
-					document.getElementById("oreoim").setAttribute('src', data);
+    		var k =1,l=0;
+
+    		var data = canvas1.toDataURL('image/png');
+		while(k !== 0){
+			if(imgs.[l].getAttribute('src') === null){
+			imgs.[l].setAttribute('src', data);
+				k = 0;
+			}
+		   l++;
+		}
 					canvas3.style.top = 112 + "px" ;
 		var sdf = (Number(dx)+900);
 		o = "";
