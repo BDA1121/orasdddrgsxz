@@ -127,9 +127,9 @@ function logKey(e) {
     	if(o === "o1"){
     		var data = canvas1.toDataURL('image/png');
 					document.getElementById("oreoim").setAttribute('src', data);
-					canvas1.style.top = dy + "px" ;
+					canvas1.style.top = 110 + "px" ;
 		var sdf =  (Number(dx)+300) ;
-canvas1.style.left = sdf + "px";
+canvas1.style.left = 415 + "px";
 ctx1.clearRect(0,0,300,150);
 x =-1;
  		oreof1 = true;
@@ -138,9 +138,9 @@ x =-1;
     	if(o === "o2"){
     		var data = canvas2.toDataURL('image/png');
 					document.getElementById("oreoim").setAttribute('src', data);
-					canvas2.style.top = dy + "px" ;
+					canvas2.style.top = 111 + "px" ;
 		var sdf = (Number(dx)+600);
-canvas2.style.left = sdf + "px";
+canvas2.style.left = 655 + "px";
 ctx2.clearRect(0,0,300,150);
 x =0;
  		oreof2 = true;
@@ -149,9 +149,9 @@ x =0;
     	if(o === "o3"){
     		var data = canvas3.toDataURL('image/png');
 					document.getElementById("oreoim").setAttribute('src', data);
-					canvas3.style.top = dy + "px" ;
+					canvas3.style.top = 112 + "px" ;
 		var sdf = (Number(dx)+900);
-canvas3.style.left = sdf + "px";
+canvas3.style.left = 895 + "px";
 ctx3.clearRect(0,0,300,150);
 x =1;
  		oreof3 = true;
