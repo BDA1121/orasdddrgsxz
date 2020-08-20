@@ -106,16 +106,16 @@ window.addEventListener("mousemove",function(e){
     		canvas1.style.left = xc + "px"; }
     		else if(!drag && o === "o2"){
     		console.log(";;")
-    		var xc = 655 - dx1 + e.clientX;
-            var yc =110 - dy1 + e.clientY-;
-    		canvas2.style.top = yc + "px" 
-    		canvas2.style.left = xc + "px"; }
+    		var xc1 = 655 - dx2 + e.clientX;
+            var yc1 =110 - dy2 + e.clientY-;
+    		canvas2.style.top = yc1+ "px" 
+    		canvas2.style.left = xc1 + "px"; }
     		else if(!drag && o === "o3"){
     		console.log(";;")
-    		var xc = 895 - dx1 + e.clientX;
-            var yc = 110 - dy1 + e.clientY;
-    		canvas3.style.top = yc + "px" 
-    		canvas3.style.left = xc + "px"; }
+    		var xc2 = 895 - dx3 + e.clientX;
+            var yc2 = 110 - dy3 + e.clientY;
+    		canvas3.style.top = yc2 + "px" 
+    		canvas3.style.left = xc2 + "px"; }
     	})
 window.addEventListener('click', logKey);
 var screenLog = document.getElementById("screen-log");
@@ -195,8 +195,8 @@ else if(e.clientX>645  && e.clientX<895){
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
     if(drag){
-    	dx1 = e.clientX;
-    	dy1 = e.clientY;
+    	dx2 = e.clientX;
+    	dy2 = e.clientY;
     	dx  = canvas2.style.top ;
     	dy  = canvas2.style.left;
     	drag = false;
@@ -216,8 +216,8 @@ else if(e.clientX<1125  && e.clientX>895){
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
     if(drag){
-    	dx1 = e.clientX;
-    	dy1 = e.clientY;
+    	dx2 = e.clientX;
+    	dy2 = e.clientY;
     	dx  = canvas3.style.top ;
     	dy  = canvas3.style.left;
     	drag = false;
