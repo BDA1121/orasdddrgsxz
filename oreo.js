@@ -132,6 +132,7 @@ function logKey(e) {
 canvas1.style.left = 415 + "px";
 ctx1.clearRect(0,0,300,150);
 x =-1;
+		o = "";
  		oreof1 = true;
 
     	}
@@ -140,6 +141,8 @@ x =-1;
 					document.getElementById("oreoim").setAttribute('src', data);
 					canvas2.style.top = 111 + "px" ;
 		var sdf = (Number(dx)+600);
+		
+		o = "";
 canvas2.style.left = 655 + "px";
 ctx2.clearRect(0,0,300,150);
 x =0;
@@ -151,6 +154,7 @@ x =0;
 					document.getElementById("oreoim").setAttribute('src', data);
 					canvas3.style.top = 112 + "px" ;
 		var sdf = (Number(dx)+900);
+		o = "";
 canvas3.style.left = 895 + "px";
 ctx3.clearRect(0,0,300,150);
 x =1;
@@ -164,6 +168,7 @@ x =1;
     	
     }
 	else if(e.clientX<645  && e.clientX>415){
+		console.log("----------");
 		o = "o1";
   screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
