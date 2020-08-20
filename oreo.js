@@ -1,7 +1,7 @@
 var canvas1 = document.getElementById("canvas1");
 var canvas2 = document.getElementById("canvas2");
 var canvas3 = document.getElementById("canvas3");
-document.body.style.backgroundImage = "url('slides1.png')";
+document.body.style.backgroundImage = "url('slide1.png')";
 var but = document.getElementById("but");
 
 var ctx1 = canvas1.getContext('2d');
@@ -58,7 +58,7 @@ ctx.fillStyle = '#73c2fb';
  	}
  //})
  var oreo1,oreo2,oreo3,size1,size2,size3;
- var oreof1=true, oreof3=true, oreof3=true;
+ var oreof1=true, oreof2=true, oreof3=true;
  function  oreosss(event){
 event.preventDefault();
  	
@@ -102,12 +102,24 @@ event.preventDefault();
 
 //window.addEventListener('mousemove', logKey);
 window.addEventListener("mousemove",function(e){
-    		 if(!drag){
+    		 if(!drag && o === "o1"){
     		console.log(";;")
     		var xc = Number(dx) - dx1 + e.clientX+300;
             var yc = Number(dy) - dy1 + e.clientY-300;
     		canvas1.style.top = yc + "px" 
     		canvas1.style.left = xc + "px"; }
+    		else if(!drag && o === "o2"){
+    		console.log(";;")
+    		var xc = Number(dx) - dx1 + e.clientX+600;
+            var yc = Number(dy) - dy1 + e.clientY-600;
+    		canvas2.style.top = yc + "px" 
+    		canvas2.style.left = xc + "px"; }
+    		else if(!drag && o === "o3"){
+    		console.log(";;")
+    		var xc = Number(dx) - dx1 + e.clientX+600;
+            var yc = Number(dy) - dy1 + e.clientY-600;
+    		canvas3.style.top = yc + "px" 
+    		canvas3.style.left = xc + "px"; }
     	})
 window.addEventListener('click', logKey);
 var screenLog = document.getElementById("screen-log");
@@ -116,20 +128,44 @@ function logKey(e) {
     if(e.clientX<1495  && e.clientX>1178){
     	drag = true;
     	console.log("---------");
-					var data = canvas1.toDataURL('image/png');
+    	if(o === "o1"){
+    		var data = canvas2.toDataURL('image/png');
 					document.getElementById("oreoim").setAttribute('src', data);
-					canvas1.style.top = dx + "px" ;
-canvas1.style.left = 420 + "px";
+					canvas1.style.top = dy + "px" ;
+canvas1.style.left = (dx+300) + "px";
 ctx1.clearRect(0,0,300,150);
 x =-1;
  		oreof1 = true;
-  screenLog.innerText = `
+
+    	}
+    	if(o === "o2"){
+    		var data = canvas2.toDataURL('image/png');
+					document.getElementById("oreoim").setAttribute('src', data);
+					canvas2.style.top = dy + "px" ;
+canvas2.style.left = (dx+600) + "px";
+ctx2.clearRect(0,0,300,150);
+x =0;
+ 		oreof2 = true;
+
+    	}
+    	if(o === "o3"){
+    		var data = canvas2.toDataURL('image/png');
+					document.getElementById("oreoim").setAttribute('src', data);
+					canvas3.style.top = dy + "px" ;
+canvas3.style.left = (dx+900) + "px";
+ctx3.clearRect(0,0,300,150);
+x =0;
+ 		oreof3 = true;
+
+    	}
+					  screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
 					
     	
     }
 	else if(e.clientX<645  && e.clientX>415){
+		o = "o1";
   screenLog.innerText = `
     Screen X/Y: ${e.screenX}, ${e.screenY}
     Client X/Y: ${e.clientX}, ${e.clientY}`;
@@ -147,16 +183,51 @@ x =-1;
        }
        dx = t;
        dy = ty
-    }
-
-    
-    
-   
-    	
-     
+    }    
+}
+else if(e.clientX>645  && e.clientX<895){
+	o = "o2";
+  screenLog.innerText = `
+    Screen X/Y: ${e.screenX}, ${e.screenY}
+    Client X/Y: ${e.clientX}, ${e.clientY}`;
+    if(drag){
+    	dx1 = e.clientX;
+    	dy1 = e.clientY;
+    	dx  = canvas2.style.top ;
+    	dy  = canvas2.style.left;
+    	drag = false;
+       for(var i =0 ; i<3; i++){
+             t = t+ dx[i];
+       }
+       for(var i =0 ; i<3; i++){
+             ty = ty+ dy[i];
+       }
+       dx = t;
+       dy = ty
+    }    
+}
+else if(e.clientX<1125  && e.clientX>895){
+	o = "o3";
+  screenLog.innerText = `
+    Screen X/Y: ${e.screenX}, ${e.screenY}
+    Client X/Y: ${e.clientX}, ${e.clientY}`;
+    if(drag){
+    	dx1 = e.clientX;
+    	dy1 = e.clientY;
+    	dx  = canvas3.style.top ;
+    	dy  = canvas3.style.left;
+    	drag = false;
+       for(var i =0 ; i<3; i++){
+             t = t+ dx[i];
+       }
+       for(var i =0 ; i<3; i++){
+             ty = ty+ dy[i];
+       }
+       dx = t;
+       dy = ty
+    }    
 }
 
-	
 }
 
 
