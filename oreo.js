@@ -1,9 +1,7 @@
-	
+var but = document.getElementById("but");
 var canvas1 = document.getElementById("canvas1");
 var canvas2 = document.getElementById("canvas2");
 var canvas3 = document.getElementById("canvas3");
-var but = document.getElementById("but");
-
 var ctx1 = canvas1.getContext('2d');
 var ctx2 = canvas2.getContext('2d');
 var ctx3 = canvas3.getContext('2d');
@@ -16,7 +14,7 @@ var y1 = 0,y2 = 0,y3 = 0,z1 = 0 , z2 = 0, z3 = 0;
  var x = -1;
  var resize = document.querySelector("#resize");
  //resize.addEventListener("click",function(){
-  if(x === 0){
+ /*if(x === 0){
     ctx.beginPath();
         ctx.moveTo(100, 650);
         ctx.lineTo(100, 650 - y1);
@@ -56,7 +54,7 @@ ctx.fillStyle = '#73c2fb';
         ctx.fillRect(100+200*(z1)-5,650 - y1/2-5, 10, 10);
         ctx.beginPath();
         ctx.fillRect(100+(200*(z1))/2 -5 , 650-5, 10, 10);
-  }
+  }*/
  //})
  var oreo1,oreo2,oreo3,size1,size2,size3;
  var oreof1=true, oreof2=true, oreof3=true;
@@ -189,6 +187,8 @@ var screenLog = document.getElementById("screen-log");
 var drag = true,dx,dx1,dy,dy1,dx2,dy2,dx3,dy3,t = "",ty = "";
 function logKey(e) {
     if(e.clientX<1495  && e.clientX>1178){
+    	document.getElementById("imgShop").style.display = "";
+
       drag = true;
       console.log("---------");
       if(o === "o1"){
@@ -254,6 +254,7 @@ x =1;
       }
     }
   else if(e.clientX<645  && e.clientX>415){
+  	document.getElementById("imgShop").style.display = "none";
     console.log("----------");
     o = "o1";
     if(drag){
@@ -273,6 +274,8 @@ x =1;
     }    
 }
 else if(e.clientX>645  && e.clientX<895){
+	document.getElementById("imgShop").style.display = "none";
+
   o = "o2";
     if(drag){
       dx2 = e.clientX;
@@ -291,6 +294,7 @@ else if(e.clientX>645  && e.clientX<895){
     }    
 }
 else if(e.clientX<1125  && e.clientX>895){
+	document.getElementById("imgShop").style.display = "none";
   o = "o3";
     if(drag){
       dx3 = e.clientX;
@@ -308,7 +312,4 @@ else if(e.clientX<1125  && e.clientX>895){
        dy = ty
     }    
 }
-
 }
-
-
